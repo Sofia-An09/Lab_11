@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Група ПП-25 _ Антіпова Софія _ Завдання 1.3</title>
+</head>
+<body style="background-color: #ffb978; color: #712216; text-align: center; font-family: sans-serif;">
+<h1>Завдання 1.3: Обчислення площі і периметра правильного n-кутника, описаного біля кола радіуса R</h1>
+<script>
+    "use strict";
+    const instruction = confirm("Розпочати обчислення площі та периметра?");
+
+    if (instruction) {
+        let n = parseInt(prompt("Введіть кількість кутів (n):", ""));
+        let r = parseInt(prompt("Введіть радіус (r):", ""));
+        if (n > 2 && r > 0) {
+            // Площа (S)
+            let s = n * Math.pow(r, 2) * Math.tan(Math.PI / n);
+            // Периметр (P)
+            let p = 2 * n * r * Math.tan(Math.PI / n);
+            // Округлення
+            let pRounded = Math.round(p);
+            let sRounded = Math.round(s);
+
+            alert("Кількість кутів: " + n + "\n" +
+                "Радіус: " + r + "\n" +
+                "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+                "Площа (S): " + s + "\n" +
+                "Обрахунок за формулою: " + n + " * pow(" + r + ", 2) * tan(Pi / " + n + ")\n\n" +
+
+                "Периметр (P): " + p + "\n" +
+                "Обрахунок за формулою: 2 * " + n + " * " + r + " * tan(Pi / " + n + ")\n\n" +
+
+                "Округлений периметр (Math.round): " + pRounded + "\n" +
+                "Округлена площа (Math.round): " + sRounded
+            );
+        } else {
+            alert("Ви ввели некоректні дані(n > 2 і r > 0) або натиснули скасувати");
+        }
+
+    } else {
+        alert("Розрахунок було скасовано. Гарного вам дня!");
+    }
+</script>
+</body>
+</html>

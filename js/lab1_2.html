@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Група ПП-25 _ Антіпова Софія _ Завдання 1.2</title>
+</head>
+<body style="background-color: #ffb978; color: #712216; text-align: center; font-family: sans-serif;">
+<h1>Завдання 1.2: обчислення арифметичних виразів</h1>
+<script>
+    "use strict";
+    alert("Вітаю до магазину ChocoFox!");
+    const instruction = confirm("Для обчислення вартості замовлення натисніть 'ОК'");
+    if (instruction) {
+        // Якщо натиснули "ОК" на початку
+        const price = parseFloat(prompt("Введіть початкову ціну шоколадки:", ""));
+        const percent = parseFloat(prompt("Введіть відсоток знижки:", ""));
+        if (!isNaN(price) && !isNaN(percent)) {
+            let discountSum = price * percent / 100;
+            let finalPrice = price - discountSum;
+
+            alert("Початкова ціна: " + price + " грн\n" +
+                "Знижка склала: " + discountSum + " грн\n" +
+                "Розрахунок: " + price + " * " + percent + " / 100\n" +
+                "~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+                "До сплати: " + finalPrice + " грн");
+        } else {
+            alert("Ви ввели некоректні дані або натиснули скасувати");
+        }
+
+    } else {
+        // Якщо натиснули "Скасувати" на початку
+        alert("Розрахунок було скасовано. Гарного вам дня!");
+    }
+</script>
+</body>
+</html>

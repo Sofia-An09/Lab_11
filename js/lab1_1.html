@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Група ПП-25 _ Антіпова Софія _ Завдання 1.1</title>
+</head>
+<body style="background-color: #ffb978; color: #712216; text-align: center; font-family: sans-serif;">
+<h1>Завдання 1.1: робота з діалоговими вікнами</h1>
+<script>
+  "use strict";
+  alert("Нові пропозиції у чорну п'ятницю!");
+  const instruction=confirm("Для отримання акційного промокоду натисніть 'ОК'");
+  if (instruction) {
+    const email = prompt("Введіть вашу пошту", "");
+    if (email && email.includes("@") && email.includes(".")) {
+      alert("На " + email + " прийде повідомлення з промокодом, не пропустіть!");
+    } else {
+      alert("Ви ввели некоректні дані(має містити @ та .) або натиснули скасувати");
+    }
+  } else {
+    alert("Шкода, але не забудьте відвідати наш сайт на цікаві новинки!");
+  }
+</script>
+</body>
+</html>
